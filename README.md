@@ -1,2 +1,3 @@
 # VoronMods
-My own mods for Voron printers.  Usually will be here when I have not yet added them to VoronUsers.
+My own mods for Voron printers.  Some of them are in VoronUsers already, some are here because they have not yet been submitted to be added.
+
