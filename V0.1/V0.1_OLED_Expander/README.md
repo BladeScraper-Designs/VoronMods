@@ -52,3 +52,5 @@ There are two STLs available.  One of them is just the display and Pico, and the
 ![](IMG/Pi_Without_Button.png)<br>
 ![](IMG/V0.1_OLED_Expander_With_EStop.png)<br>
 ![](IMG/Pi_With_Button.png)<br>
+
+STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.
