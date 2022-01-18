@@ -1,9 +1,13 @@
 ## Purpose
 
-The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as any other additional things you want to drive with a bare MCU such as NeoPixels, another display, an external MOSFET, and anything else.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
+The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
+
 ![](IMG/display.jpg)<br>
 
 It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
+
+Becuase this is an entirely separate MCU, you can do a lot more with it than just driving a small display.  You could easily add some wiring to connect to an ADXL345 to run input shaper, drive some NeoPixels, control an external MOSFET, and more.  
+
 ![](IMG/pico.jpg)<br>
 
 ## Wiring the display to the Pico MCU
@@ -55,4 +59,4 @@ There are two STLs available.  One of them is just the display and Pico, and the
 ![](IMG/V0.1_OLED_Expander_With_EStop.png)<br>
 ![](IMG/Pi_With_Button.png)<br>
 
-STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.
+STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
