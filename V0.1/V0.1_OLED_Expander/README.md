@@ -19,9 +19,9 @@ To flash the Pico MCU, SSH into your Pi and follow these steps:
 
 1. cd ~/klipper
 2. make clean
-3. make menuconfig
-    Micro-controller Architecture should be set to "Raspberry Pi RP2040"
-    Communication Interface should be USB
+3. make menuconfig <br>
+    Micro-controller Architecture should be set to "Raspberry Pi RP2040" <br>
+    Communication Interface should be USB <br>
 4. Q (asks you to save, hit Y)
 5. make
 
