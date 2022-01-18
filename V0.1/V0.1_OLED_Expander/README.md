@@ -10,7 +10,7 @@ Seeing as the display uses I2C wiring is super simple, using only four wires of 
 ** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  As such you must run the SSD1306 display off of 3.3V, NOT 5V.  
 Wire them together according to this diagram.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
-![](IMG/wiring.png)
+![](IMG/wiring.png)<br>
 Photo Credit Tom's Hardware.
 
 ## Making the Pico Firmware
