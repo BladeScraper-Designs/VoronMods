@@ -17,7 +17,8 @@ Seeing as the display uses I2C wiring is super simple, using only four wires of 
 Wire them together according to this diagram.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
 ![](IMG/wiring.png)<br>
-Photo Credit Tom's Hardware.
+Photo Credit Tom's Hardware. 
+https://www.tomshardware.com/how-to/oled-display-raspberry-pi-pico
 
 ## Making the Pico Firmware
 
