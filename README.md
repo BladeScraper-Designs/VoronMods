@@ -8,7 +8,7 @@ Microswitch_Pod_With_Conector<br>
 Horizontal-Spool-Holder<br>
 
 ## Voron 0.1
-![CornerPanel_SpoolHolder](CornerPanel_SpoolHolder)<br>
+[CornerPanel_SpoolHolder](CornerPanel_SpoolHolder)<br>
 V0.1_OLED_Expander<br>
 
 ![](IMG/wiring.png)
