@@ -10,7 +10,7 @@ Seeing as the display uses I2C wiring is super simple, using only four wires of 
 ** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  As such you must run the SSD1306 display off of 3.3V, NOT 5V.  
 Wire them together according to this diagram.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
-
+![](IMG/wiring.png)<br>
 Photo Credit Tom's Hardware.
 
 ## Making the Pico Firmware
@@ -37,5 +37,20 @@ There's a couple ways to flash the firmware to the Pico.  You can either do it o
 
 Once done with flashing the Pico, all you have to do is upload the pico.cfg I've included to the config folder on your main Pi, then add [include pico.cfg] to your main printer.cfg.  Alternatively, you can just copy the contents of pico.cfg to your main printer.cfg.  I prefer the separate cfg myself, though.
 
-Plug the Pico into your Pi via USB, run the cable as needed, do a firmware restart, and you're done!
+Plug the Pico into your Pi via USB, run the cable as needed, then do the same commands you normally do to find the serial ID of the new MCU:
 
+1. ls -l /dev/serial/by-id
+2. it will be something like /usb-Klipper_rp2040.  
+3. copy that serial ID (the entire thing, not just the /usb-Klipper_rp2040 part) and replace what's currently in pico.cfg.
+
+Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.
+
+## STL Options
+There are two STLs available.  One of them is just the display and Pico, and the other has accommodations for a 16mm pushbutton to function as an emergency stop button.  This can be wired directly to the Pico MCU.  I do not have a config example and wiring diagram for this, but it should be quite easy.  Just do a bit of research.
+
+![](IMG/V0.1_OLED_Expander.png)<br>
+![](IMG/Pi_Without_Button.png)<br>
+![](IMG/V0.1_OLED_Expander_With_EStop.png)<br>
+![](IMG/Pi_With_Button.png)<br>
+
+STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.
