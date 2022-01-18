@@ -66,3 +66,10 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 1. An 18" micro USB is probably the right length, obviously longer will work but you'll need to wrap it around itself a few times to shorten it.
 2. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
 3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
+
+## USB Cable Routing
+This is the best routing I've found for the USB cable. 
+
+![](IMG/routing1.jpg)<br>
+![](IMG/routing2.jpgg)<br>
+
