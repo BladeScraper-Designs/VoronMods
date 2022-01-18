@@ -39,3 +39,10 @@ Once done with flashing the Pico, all you have to do is upload the pico.cfg I've
 
 Plug the Pico into your Pi via USB, run the cable as needed, do a firmware restart, and you're done!
 
+## STL Options
+There are two STLs available.  One of them is just the display and Pico, and the other has accommodations for a 16mm pushbutton to function as an emergency stop button.  This can be wired directly to the Pico MCU.  I do not have a config example and wiring diagram for this, but it should be quite easy.  Just do a bit of research.
+
+![](IMG/V0.1_OLED_Expander.png)<br>
+![](IMG/Pi_Without_Button.png)<br>
+![](IMG/V0.1_OLED_Expander_With_EStop.png)<br>
+![](IMG/Pi_With_Button.png)<br>
