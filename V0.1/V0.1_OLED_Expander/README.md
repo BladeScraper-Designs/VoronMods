@@ -20,7 +20,7 @@ To flash the Pico MCU, SSH into your Pi and follow these steps:
 
 There's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (easier).  These instructions are the easier way:
 
-1. once the make command completes, use FileZilla or a similar FTP program to log into the Pi and download klipper.uf2
+1. once the make command completes, use FileZilla or a similar FTP program to log into the Pi and download klipper.uf2 from ~/klipper/out
 2. Put your Pico into bootloader mode.  To do this, plug the Pico into your PC while holding the BOOTSEL button.  It will pop up on This PC as a mass storage device with a capacity of 128MB.
 3. Copy the klipper.uf2 to the Pico.  Once copied, it will automatically unmount from the PC, reboot, flash, and that's it. 
 
