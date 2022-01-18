@@ -15,7 +15,7 @@ Photo Credit Tom's Hardware.
 
 ## Making the Pico Firmware
 
-To flash the Pico MCU, SSH into your Pi and follow these steps:
+To flash the Pico MCU, SSH into your Pi and enter these commands.
 
 1. cd ~/klipper
 2. make clean
