@@ -4,6 +4,15 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to drive a s
 
 It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
 
+## Wiring the display to the Pico MCU
+
+Seeing as the display uses I2C wiring is super simple, using only four wires of which two are used for power.
+** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  As such you must run the SSD1306 display off of 3.3V, NOT 5V.  
+Wire them together according to this diagram.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
+
+
+Photo Credit Tom's Hardware.
+
 ## Making the Pico Firmware
 
 To flash the Pico MCU, SSH into your Pi and follow these steps:
@@ -27,4 +36,6 @@ There's a couple ways to flash the firmware to the Pico.  You can either do it o
 ## Setting up .cfg 
 
 Once done with flashing the Pico, all you have to do is upload the pico.cfg I've included to the config folder on your main Pi, then add [include pico.cfg] to your main printer.cfg.  Alternatively, you can just copy the contents of pico.cfg to your main printer.cfg.  I prefer the separate cfg myself, though.
+
+Plug the Pico into your Pi via USB, run the cable as needed, do a firmware restart, and you're done!
 
