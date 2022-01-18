@@ -1,17 +1,24 @@
 ## Purpose
 
-The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as any other additional things you want to drive with a bare MCU such as NeoPixels, another display, an external MOSFET, and anything else.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
+The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
+
+![](IMG/display.jpg)<br>
 
 It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
+
+Becuase this is an entirely separate MCU, you can do a lot more with it than just driving a small display.  You could easily add some wiring to connect to an ADXL345 to run input shaper, drive some NeoPixels, control an external MOSFET, and more.  
+
+![](IMG/pico.jpg)<br>
 
 ## Wiring the display to the Pico MCU
 
 Seeing as the display uses I2C wiring is super simple, using only four wires of which two are used for power. <br>
-** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  As such you must run the SSD1306 display off of 3.3V, NOT 5V.  
+** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so I'd power the display from 3.3V rather than 5V just to be safe.
 Wire them together according to this diagram.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
 ![](IMG/wiring.png)<br>
-Photo Credit Tom's Hardware.
+Photo Credit Tom's Hardware. 
+https://www.tomshardware.com/how-to/oled-display-raspberry-pi-pico
 
 ## Making the Pico Firmware
 
@@ -27,9 +34,9 @@ To flash the Pico MCU, SSH into your Pi and enter these commands.
 
 ## Flashing your Pico
 
-There's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (easier).  These instructions are the easier way:
+Once the make commmand is finished, there's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (easier).  These instructions are the easier way:
 
-1. once the make command completes, use FileZilla or a similar FTP program to log into the Pi and download klipper.uf2 from ~/klipper/out
+1. Use FileZilla or a similar FTP program to log into the Pi and download klipper.uf2 from ~/klipper/out
 2. Put your Pico into bootloader mode.  To do this, plug the Pico into your PC while holding the BOOTSEL button.  It will pop up on This PC as a mass storage device with a capacity of 128MB.
 3. Copy the klipper.uf2 to the Pico.  Once copied, it will automatically unmount from the PC, reboot, flash, and that's it. 
 
@@ -53,4 +60,9 @@ There are two STLs available.  One of them is just the display and Pico, and the
 ![](IMG/V0.1_OLED_Expander_With_EStop.png)<br>
 ![](IMG/Pi_With_Button.png)<br>
 
-STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.
+STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
+
+## Notes
+1. An 18" micro USB is probably the right length, obviously longer will work but you'll need to wrap it around itself a few times to shorten it.
+2. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
+3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
