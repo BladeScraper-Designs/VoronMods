@@ -71,5 +71,5 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 This is the best routing I've found for the USB cable. 
 
 ![](IMG/routing1.jpg)<br>
-![](IMG/routing2.jpgg)<br>
+![](IMG/routing2.jpg)<br>
 
