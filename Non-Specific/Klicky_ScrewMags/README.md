@@ -6,12 +6,10 @@ This mod consists of modified files for the [Klicky Probe](https://github.com/jl
 Presently, only mods have been made for the Voron 2.4-specific Klicky parts, but eventually I'll get around to doing the rest.  
 
 Hardware BOM: <br>
-8 x 6x3mm Countersunk Ring Magnets <br>
-[Source 1 K&J Magnetics](https://www.kjmagnetics.com/proddetail.asp?prod=R422CS-P) <br>
-[Source 2 Aliexpress](https://tinyurl.com/bdfzvevu) <br>
+3 PAIR x 1/4" x 1/8" Countersunk Ring Magnets <br>
+[K&J Magnetics](https://www.kjmagnetics.com/proddetail.asp?prod=R422CS-P) <br>
 
+8 x #2 x 3/8" Self Tapping Flat Head Screws <br>
+[Amazon](https://smile.amazon.com/gp/product/B07D5S3DS1/) <br>
 
-8 x #2 x 3/8" or M2 x 10mm Self Tapping Flat Head Screws <br>
-[Source 1 Amazon](https://smile.amazon.com/gp/product/B07D5S3DS1/) <br>
-[Source 2 Aliexpress](https://tinyurl.com/mtv6b3n5) <br>
-
+I have not been able to find bulk sources from China, yet.  I have found some 6x3mm magnets, but the issue is that they appear to come with all the same polarity.  For this to work, you need pairs that will mate to each other.
