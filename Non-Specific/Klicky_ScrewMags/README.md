@@ -1,4 +1,4 @@
-## This is a placeholder README in preparation for release.  No files available yet.
+## This is a placeholder README in preparation for release.  No files available yet pending more testing.
 
 ## Purpose
 This mod consists of modified files for the [Klicky Probe](https://github.com/jlas1/Klicky-Probe).  Instead of press fit/glue for the magnets, it utilizes similarly sized countersunk ring magnets.  The benefit is that the magnets are much easier to install properly, without nearly as much worry about misalignment, and no need for press guides.  
