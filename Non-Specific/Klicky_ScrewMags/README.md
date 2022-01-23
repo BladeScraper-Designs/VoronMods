@@ -5,4 +5,4 @@ This mod consists of modified files for the [Klicky Probe](https://github.com/jl
 
 BOM: <br>
 8 x ~6x3mm Countersunk Ring Magnets [Source 1 K&J Magnetics](https://www.kjmagnetics.com/proddetail.asp?prod=R422CS-P) [Source 2 Aliexpress](https://tinyurl.com/bdfzvevu) <br>
-8 x #2 x 3/8" or M2 x 10mm Self Tapping Flat Head Screws [Source 1 Amazon](https://smile.amazon.com/gp/product/B07D5S3DS1/) [Source 2 Aliexpress](https://tinyurl.com/mtv6b3n5)
+8 x ~ #2 x 3/8" or M2 x 10mm Self Tapping Flat Head Screws [Source 1 Amazon](https://smile.amazon.com/gp/product/B07D5S3DS1/) [Source 2 Aliexpress](https://tinyurl.com/mtv6b3n5)
