@@ -4,13 +4,13 @@ Info on setting up the Euclid is pretty scarce, especially for the Voron 2.4.  I
 
 ## STLs
 
-For most V2 setups (and probably Trident), you'll want these STLs.  
+For most V2 setups (and probably Trident), you'll want these STLs: 
 
-## Probe
+### Probe
 You'll need two M3 heatset inserts (standard Voron spec) for this.
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/OmronFotekHeatsertV3.stl
 
-## Dock
+### Dock
 I tried the bed mount dock, but if the gantry has not been QGL'd it struggles to deploy/stow the probe.  I found the gantry mount to be much more reliable.
 You'll need an M5 nut and three M5x20 screws to install this.  It mounts on the rear left motor mount, replacing the two shorter M5 screws.  You'll have to finagle the motor wires a bit.
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Trident_TopMountCloseV4.stl
