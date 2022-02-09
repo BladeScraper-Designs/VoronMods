@@ -23,5 +23,5 @@ I started off with the default Euclid Klipper config, but I found it suboptimal 
 This is my Euclid probe cfg.  You can either download it and add [include euclid.cfg] to your printer.cfg, or copy its contents and paste them directly into your own config.  I created a subdirectory in my .cfg folder called Euclid to make it a bit more organized.  If you do so, it'll be [include Euclid/euclid.cfg].  
 https://github.com/BladeScraper-Designs/VoronMods/blob/main/V2.4/EuclidProbe/cfg/euclid.cfg
 
-And this is my config for Auto Z.  If you don't want to use auto Z calibration, simply ignore this file and remove [include auto_z.cfg] from euclid.cfg. ,br.
+And this is my config for Auto Z.  If you don't want to use auto Z calibration, simply ignore this file and remove [include auto_z.cfg] from euclid.cfg. <br>
 https://github.com/BladeScraper-Designs/VoronMods/blob/main/V2.4/EuclidProbe/cfg/auto_z.cfg
