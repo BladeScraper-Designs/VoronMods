@@ -16,20 +16,20 @@ Seeing as the display uses I2C wiring is super simple, using only four wires of 
 ** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so I'd power the display from 3.3V rather than 5V just to be safe.
 Wire them together according to the below list.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
-VCC --> 3V3
-GND --> GND
-SCK --> GP1
-SDA --> GP0
+VCC --> 3V3 <br>
+GND --> GND <br>
+SCK --> GP1 <br>
+SDA --> GP0 <br>
 
 ## Wiring the encoder to the Pico MCU
 
 The encoder wiring is also quite simple.  Follow the below list.  You will need to either cut off/desolder the pins or bend them out of the way, because how they come out of the package the pins will hit the skirt piece.
 
-VCC --> 3V3
-GND --> GND
-SW --> GP18
-DT --> GP17
-CLK --> GP16
+VCC --> 3V3 <br>
+GND --> GND <br>
+SW --> GP18 <br>
+DT --> GP17 <br>
+CLK --> GP16 <br>
 
 ## Making the Pico Firmware
 
