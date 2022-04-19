@@ -2,13 +2,13 @@
 
 The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as provide a rotary encoder interface for the menus.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
 
-![](IMG/V0.1_OLED_Expander.png)<br>
+![](IMG/OLED_Expander.png)<br>
 
 It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  The encoder is a typical KY-040 encoder, available for very cheap all over the place. The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
 
 Becuase this is an entirely separate MCU, you can do a lot more with it than just driving a small display and the encoder.  You could easily add some wiring to connect to an ADXL345 to run input shaper (custom wiring harness and connector required), drive some NeoPixels, control an external MOSFET for e.g. fan control, and more.  
 
-![](IMG/pico.jpg)<br>
+![](IMG/V0.1_OLED_Expander)<br>
 
 ## Wiring the display to the Pico MCU
 
@@ -77,6 +77,6 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
 
-![](IMG/routing1.jpg)<br>
-![](IMG/routing2.jpg)<br>
+![](IMG/Routing_1.jpg)<br>
+![](IMG/Routing_2.jpg)<br>
 
