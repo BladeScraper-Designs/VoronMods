@@ -25,3 +25,5 @@ https://github.com/BladeScraper-Designs/VoronMods/blob/main/V2.4/EuclidProbe/cfg
 
 And this is my config for Auto Z.  If you don't want to use auto Z calibration, simply ignore this file and remove [include auto_z.cfg] from euclid.cfg. <br>
 https://github.com/BladeScraper-Designs/VoronMods/blob/main/V2.4/EuclidProbe/cfg/auto_z.cfg
+
+These configs aren't quite as easy to modify as the official Auto_Z and Euclid/Klicky configs, but they should be a decent starting point.  You may need to refer to those official configs to ensure you know what you are changing.  I tried to add notes where I can, but really can't come close to their level of detail in some places.
