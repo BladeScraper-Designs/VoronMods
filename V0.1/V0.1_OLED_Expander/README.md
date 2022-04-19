@@ -2,7 +2,7 @@
 
 The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as provide a rotary encoder interface for the menus.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
 
-![](IMG/display2.jpg)<br>
+![](IMG/V0.1_OLED_Expander.png)<br>
 
 It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  If desired, you can also add a rotary encoder to the mix, allowing access to the standard Klipper menus. The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
 
@@ -16,20 +16,20 @@ Seeing as the display uses I2C wiring is super simple, using only four wires of 
 ** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so I'd power the display from 3.3V rather than 5V just to be safe.
 Wire them together according to the below list.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
-VCC --> 3V3
-GND --> GND
-SCK --> GP1
-SDA --> GP0
+VCC --> 3V3 <br>
+GND --> GND <br>
+SCK --> GP1 <br>
+SDA --> GP0 <br>
 
 ## Wiring the encoder to the Pico MCU
 
 The encoder wiring is also quite simple.  Follow the below list.  You will need to either cut off/desolder the pins or bend them out of the way, because how they come out of the package the pins will hit the skirt piece.
 
-VCC --> 3V3
-GND --> GND
-SW --> GP18
-DT --> GP17
-CLK --> GP16
+VCC --> 3V3 <br>
+GND --> GND <br>
+SW --> GP18 <br>
+DT --> GP17 <br>
+CLK --> GP16 <br>
 
 ## Making the Pico Firmware
 
@@ -63,14 +63,13 @@ Plug the Pico into your Pi via USB, run the cable as needed, then do the same co
 
 Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  Note that for some reason the click part of the encoder seems to lag a bit, I'm not really sure why.  The scrolling, however, is very responsive.
 
-![](IMG/V0.1_OLED_Expander.png)<br>
-
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
 
 ## Notes
 1. An 18" micro USB is probably the right length, obviously longer will work but you'll need to wrap it around itself a few times to shorten it.  The [MonoPrice 1.5ft Micro USB](https://smile.amazon.com/gp/product/B002HZYBZ6) cable on Amazon is exactly what I am using, and it is just about perfect.
 2. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
 3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
+4. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
