@@ -73,6 +73,7 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 5. In order to use the Knob_Shortened.stl provided in STLs/CAD, you need to shorten the encoder spline by 5mm.  I found the knob it comes with to be disproportionately long.  Alternatively, I've included the STLs and CAD for the same knob but with a hole in the end (Knob_Through.stl) to allow the spline to extend past.  It looks a bit silly, but it works if you don't have the equipment to shorten the spline on the encoder.
 6. You may have to trim a little bit of the PCB on the encoder at the bottom to prevent it from rubbing on/hitting the skirt.  
 7. For some reason, when you first start up the printer, or restart Klipper, the display acts like you clicked the encoder button, and enters the menu.  I am not sure why this is.  If you have any suggestions, or manage to figure out why and/or fix it, I'd love to hear from you.
+8. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
