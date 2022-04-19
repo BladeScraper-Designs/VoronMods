@@ -71,6 +71,7 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
 4. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
 5. In order to use the Knob_Shortened.stl provided in STLs/CAD, you need to shorten the encoder spline by 5mm.  I found the knob it comes with to be disproportionately long.  Alternatively, I've included the STLs and CAD for the same knob but with a hole in the end (Knob_Through.stl) to allow the spline to extend past.  It looks a bit silly, but it works if you don't have the equipment to shorten the spline on the encoder.
+6. For some reason, when you first start up the printer, or restart Klipper, the display acts like you clicked the encoder button, and enters the menu.  I am not sure why this is.  If you have any suggestions, or manage to figure out why and/or fix it, I'd love to hear from you.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
