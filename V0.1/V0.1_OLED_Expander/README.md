@@ -63,14 +63,13 @@ Plug the Pico into your Pi via USB, run the cable as needed, then do the same co
 
 Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  Note that for some reason the click part of the encoder seems to lag a bit, I'm not really sure why.  The scrolling, however, is very responsive.
 
-![](IMG/V0.1_OLED_Expander.png)<br>
-
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
 
 ## Notes
 1. An 18" micro USB is probably the right length, obviously longer will work but you'll need to wrap it around itself a few times to shorten it.  The [MonoPrice 1.5ft Micro USB](https://smile.amazon.com/gp/product/B002HZYBZ6) cable on Amazon is exactly what I am using, and it is just about perfect.
 2. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
 3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
+4. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
