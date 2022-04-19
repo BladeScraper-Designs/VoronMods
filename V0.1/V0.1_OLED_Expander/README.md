@@ -74,6 +74,7 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 6. You may have to trim a little bit of the PCB on the encoder at the bottom to prevent it from rubbing on/hitting the skirt.  
 7. For some reason, when you first start up the printer, or restart Klipper, the display acts like you clicked the encoder button, and enters the menu.  I am not sure why this is.  If you have any suggestions, or manage to figure out why and/or fix it, I'd love to hear from you.
 8. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
+9. One weird thing about these SSD1306 OLED displays is that they often have a different color for the top row.  I'm not really sure why this is, but naturally that means the top row of the mdnu will always be that color (in my case, yellow).  I believe there are some of these that are all one color, but that's not what I have.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
