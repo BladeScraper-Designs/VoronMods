@@ -1,13 +1,14 @@
 # Voron2 Euclid
 Info on setting up the Euclid is pretty scarce, especially for the Voron 2.4.  I put this together to hopefully help people get theirs setup.  
 
-## Note! It has been brought to my attention that a lot of the files on the EuclidProbe GitHub have been updated, including a new gantry mount design.  I have not had time to mess with them.  At some point, this ReadMe and config will be updated.
+## Note! It has been brought to my attention that a lot of the files on the EuclidProbe GitHub have been updated, including a new gantry mount design.  I am currently in the process of testing these out and will update the readme as I progress.
 
 ## STLs
 
 For most V2 setups (and probably Trident), you'll want these STLs: 
 
 ### Probe
+If you're using the stock Voron Carriage (MGN12 or MGN9) you can use the Omron adapter and save yourself from having to swap out your carriage pieces.
 You'll need two M3 heatset inserts (standard Voron spec) for this.
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/OmronFotekHeatsertV3.stl
 
@@ -18,6 +19,40 @@ You'll need an M5 nut and three M5x20 screws to install this.  It mounts on the 
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Trident_TopMountCloseV1.stl <br>
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Trident_TopMountDockCloseV1.stl <br>
 Once it's installed and you begin testing and finding the correct dock location, you may need to adjust the dock up/down.
+
+## STLs (2)
+
+### Dock (2)
+New Dock Just Dropped!
+You'll need these two files:
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMountRev_4Dock.stl
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMountRev_4.stl
+
+Accompanying hardware:
+1 x M5x16
+1 x M5x30
+
+Use those to attach the dock to your gantry.  You may have to fiddle with your motor wires a bit.
+
+### Probe Mount (Toolhead) (2)
+You've got a couple of options here.  
+
+1. You can use the custom carriage with the mounting for the probe built in.  This is super nice, but will involve disassembling your carriage, which is kind of a pain.  Much easier on a new build using Euclid.  Note that as of now this only works with CW1.
+
+You'll need these STLs.  Both now use M2.5 self tapping screws, instead of M3 with heatserts.
+
+MGN9x2 (Voron 2.4 Original Design)
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_2XMGN9_Native_RightM2.5.stl
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_2XMGN9_Native_LeftM2.5.stl
+
+MGN12 (Voron 2.4R2 and Trident)
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_MGN12_Right_M2.5.stl
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_MGN12_Left.stl
+
+2. You can simply use the Omron adapter.  For the dock chosen above, you need this STL.  This also uses M2.5 self tappers.
+https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/OmronFotekM2_V3.stl
+
+
 
 ## Config
 I started off with the default Euclid Klipper config, but I found it suboptimal and somewhat hard to understand.  I customized it, and added comments to make it easier for you to understand what you'll need to change.  I also wanted to implement auto Z, so I did.
