@@ -9,12 +9,17 @@ Info on setting up the Euclid is pretty scarce, especially for the Voron 2.4.  I
 
 I am not personally a fan of the bed rail mounted dock for Euclid, so I opted to not use it.  If you decide you want to use it, you will need to make changes to the config to make it work.  Why don't I like the bed rail mount?  Well, it just doesn't work very well with a printer that has a flying, tilting gantry.  The first QGL is nearly impossible to get working in my experience, due to the fact that the printer doesn't know the toolhead's true Z position until it is QGLd, and it's hard to pick up the probe to run QGL when the printer doesn't know where the toolhead (and thus, probe mount) actually is.  Some people have gotten it working, but in my opinion for ease of build and setup, as well as deploy reliability, the gantry mount is a much better option.
 
+For the gantry mount, you'll need these two STLs.
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMountRev_4Dock.stl
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMountRev_4.stl
 
-Accompanying hardware:
-1 x M5x16
-1 x M5x30
+Accompanying hardware: <br>
+Attaching Dock Mount to Gantry:
+1 x M5x16 <br>
+1 x M5x30 <br>
+Attaching the dock itself to the dock mount: <br>
+1 x M5x20 <br>
+1 x M5 Nut <br>
 
 Use those to attach the dock to your gantry.  You may have to fiddle with your motor wires a bit.
 
