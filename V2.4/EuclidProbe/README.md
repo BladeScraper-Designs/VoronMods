@@ -38,7 +38,7 @@ MGN12 (Voron 2.4R2 and Trident)
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_MGN12_Right_M2.5.stl
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/Clockwork1_MGN12_Left.stl
 
-2. You can simply use the Omron adapter.  For the dock chosen above, you need this STL.  This also uses M2.5 self tappers.
+2. You can simply use the Omron adapter.  For the dock chosen above, you need this STL.  This also uses M2.5 self tappers.  There's not a lot to do here, just make sure when the probe is not attached that the mount itself is above the nozzle.
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/OmronFotekM2_V3.stl
 
 
