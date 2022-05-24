@@ -18,7 +18,7 @@ Attaching Dock Mount to Gantry: <br>
 1 x M5x16 <br>
 1 x M5x30 <br>
 Attaching the dock itself to the dock mount: <br>
-1 x M5x20 <br>
+1 x M5x16 <br>
 1 x M5 Nut <br>
 
 You may have to fiddle with your motor wires a bit.
