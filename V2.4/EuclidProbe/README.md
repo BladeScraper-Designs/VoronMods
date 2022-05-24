@@ -14,7 +14,7 @@ https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMount
 https://github.com/nionio6915/Euclid_Probe/blob/main/stls/Voron/VoronGantryMountRev_4.stl
 
 Accompanying hardware: <br>
-Attaching Dock Mount to Gantry:
+Attaching Dock Mount to Gantry: <br>
 1 x M5x16 <br>
 1 x M5x30 <br>
 Attaching the dock itself to the dock mount: <br>
