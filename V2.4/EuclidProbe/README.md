@@ -1,7 +1,7 @@
 # Voron2 Euclid
 Info on setting up the Euclid is pretty scarce, especially for the Voron 2.4.  I put this together to hopefully help people get theirs setup.  
 
-# Note! It has been brought to my attention that a lot of the files on the EuclidProbe GitHub have been updated, including a new gantry mount design.  I am currently in the process of testing these out and am updating the readme as I am able.
+# Note! It has been brought to my attention that a lot of the files on the EuclidProbe GitHub have been updated, including a new gantry mount design and new config.  I am currently in the process of testing these out and am updating the readme as I am able.
 
 ## STLs
 
