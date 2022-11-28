@@ -8,8 +8,6 @@ It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too l
 
 Becuase this is an entirely separate MCU, you can do a lot more with it than just driving a small display and the encoder.  You could easily add some wiring to connect to an ADXL345 to run input shaper (custom wiring harness and connector required), drive some NeoPixels, control an external MOSFET for e.g. fan control, and more.  
 
-![](IMG/V0.1_OLED_Expander.png)<br>
-
 ## Wiring the display to the Pico MCU
 
 Seeing as the display uses I2C wiring is super simple, using only four wires of which two are used for power. <br>
