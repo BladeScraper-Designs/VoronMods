@@ -1,4 +1,3 @@
-<<<<<<< HEAD:V0.1/V0.1_PicOLED/README.md
 ## Purpose
 
 The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as provide a rotary encoder interface for the menus.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
