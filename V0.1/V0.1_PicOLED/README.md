@@ -63,7 +63,7 @@ Once that's done, you should be able to do a firmware restart and see your new O
 
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
 
-## Encosder Knob
+## Encoder Knob
 
 Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.
  
