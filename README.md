@@ -9,6 +9,6 @@ Current list of mods:
 
 ## Voron 0.1
 [CornerPanel_SpoolHolder](V0.1//CornerPanel_SpoolHolder)<br>
-[V0.1_OLED_Expander](/V0.1/V0.1_PicOLED)<br>
+[V0.1_PicOLED](/V0.1/V0.1_PicOLED)<br>
 
 
