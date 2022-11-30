@@ -39,33 +39,39 @@ To flash the Pico MCU, SSH into your Pi and enter these commands.
     Micro-controller Architecture should be set to "Raspberry Pi RP2040" <br>
     Communication Interface should be USB <br>
 4. Q (asks you to save, hit Y)
-5. make
 
 ## Flashing your Pico
 
-Once the make commmand is finished, there's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (easier).  These instructions are the easier way:
+Once the make commmand is finished, there's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster and easier), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (if the first method doesn't work).  These instructions are the easier way:
 
-1. Use FileZilla or a similar FTP program to log into the Pi and download klipper.uf2 from ~/klipper/out
-2. Put your Pico into bootloader mode.  To do this, plug the Pico into your PC while holding the BOOTSEL button.  It will pop up on This PC as a mass storage device with a capacity of 128MB.
-3. Copy the klipper.uf2 to the Pico.  Once copied, it will automatically unmount from the PC, reboot, flash, and that's it. 
+1. Disconnect the Pico from your Pi if you haven't already.  Then, while holding the BOOTSEL button, plug it into the Pi.  It will go into bootloader mode, where you can flash the firmware.
+2. Run this command:
+    make flash FLASH_DEVICE=2e8a:0003
+    This will automatically copy the file to the onboard flash when the Pico is in bootloader mode.  This feature was not available when I first made this mod, so it's     good to see it here now.
+3. To make sure your Pico was flashed correctly, then type the following command:
+   ls /dev/serial/by-id/usb-Klipper_rp2040*
+   If it was successfully flashed, it will show up as something like:
+   /dev/serial/by-id/usb-Klipper_rp2040_E660C06213844C34-if00
+   Save this ID for later btw.  You'll need it for the .cfg.
+   
+   Nothing will happen on the display right now, since there is no configuration done yet.  We'll do that next.
+
 
 ## Setting up .cfg 
 
 Once done with flashing the Pico, all you have to do is upload the pico.cfg I've included to the config folder on your main Pi, then add [include pico.cfg] to your main printer.cfg.  Alternatively, you can just copy the contents of pico.cfg to your main printer.cfg.  I prefer the separate cfg myself, though.
 
-Plug the Pico into your Pi via USB, run the cable as needed, then do the same commands you normally do to find the serial ID of the new MCU:
+Remember that serial ID you copied earlier when we were checking if the Pico was flashed successfully?  Now you need that.  Replace what's currently in as the ID in pico.cfg with your own serial ID.
 
-1. ls -l /dev/serial/by-id <br>
-    it will be something like /usb-Klipper_rp2040.  
-2. copy that serial ID and replace what's currently in pico.cfg.
-
-Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  Note that for some reason the click part of the encoder seems to lag a bit, I'm not really sure why.  The scrolling, however, is very responsive.
+Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  It should be fast and responsive.
 
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
 
 ## Encoder Knob
 
-Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.
+Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.  
+
+I've also uploaded a wider, shorter knob that will only work if you cut down the encoder shaft by quite a bit.  See below:
  
 ![](IMG/Encoder_Cut.jpg)<br>
 
