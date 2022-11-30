@@ -1,5 +1,5 @@
 # VoronMods
-My own mods for Voron printers.  Some of them are in VoronUsers already, some are here because they have not yet been submitted to be added (or are waiting to be approved)
+My own mods for Voron printers.  Some of them are in VoronUsers already, some are here because they have not yet been submitted to be added (or are waiting to be approved).  Or I'm just too lazy to bother with the official VoronMods repo.
 
 Current list of mods:
 
