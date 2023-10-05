@@ -22,6 +22,8 @@ I believe these goals were satisfied well enough.
 
 As they are designed to be a very snug snap-in, you may need to tweak your extrusion multiplier to get it just right.  If it's impossible to put into the rail, try lowering your EM just a tad and try again.  
 
-Note that these are designed for LDO 1515 extrusions.  I have not tested with Makerbeam rails.  It may fit or it may not.  Give it a shot and let me know one way or the other and I'll add a note to this readme.
+Note that these are designed for LDO 1515 extrusions.  I have not tested with Makerbeam rails.  It may fit or it may not.  Give it a shot and let me know one way or the other and I'll add a note to this readme.<br>
+
+As far as I can tell, it should work with all V0 versions (0.0, 0.1, 0.2).  I tested it on my V0.1 and also put it in CAD on the V0.2.  
 
 
