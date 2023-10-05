@@ -1,11 +1,27 @@
-There are a few LED and camera solutions out there for the V0 series printers but none of them totally satisfied all of my requirements.  So I decided to make my own.  The goals in mind were:
-No hardware to attach to the frame (mostly because I didn't feel like adding nuts to the extrusions)
-Tight clip-in fit (there are a couple clip-in solutions, but none were as snug in the rail as I wanted)
-Fit extra wide LED strips
-Hold Raspberry Pi Camera V2 
-Symmetrical Design (can easily put the camera on either side without different STLs)
+## Purpose
 
+The purpose of this mod is to provide a simple to print and install, all-in-one LED and PiCam solution for the V0 series printers.  There are a number of LED and camera mounts available for the V0 but none of them quite hit all the right marks for me, so I made my own.
+
+-No hardware to attach to the frame, minimal hardware in general<br>
+-Snug clip-in fit with LDO 1515 rails (there are a couple clip-in solutions, but none were as snug in the rail as I wanted)<br>
+-Fit extra wide LED strips<br>
+-Hold Raspberry Pi Camera V2<br>
+-Symmetrical Design (can easily put the camera on either side without different STLs)<br>
+-Camera on side extrusion (as opposed to in the tophat like some camera solutions do)
+
+I believe these goals were satisfied well enough.  
 ![](IMG/LEDCam.png)
 
-BOM: <br>
-2 x M2x6 SHCS<br>
+### BOM: <br>
+2 x M2x8 SHCS<br> 
+
+### Print Instructions:<br>
+-Print vertically as the STLs come oriented.<br>
+-Suggested 2 walls, 0 top layers, 0 bottom layers, and a nice wide brim (I used 8mm).<br>
+-Use plenty of cooling as the overhang angles get pretty steep in places.  100% on Stealthburner PCF proved sufficient for me.<br>
+
+As they are designed to be a very snug snap-in, you may need to tweak your extrusion multiplier to get it just right.  If it's impossible to put into the rail, try lowering your EM just a tad and try again.  
+
+Note that these are designed for LDO 1515 extrusions.  I have not tested with Makerbeam rails.  It may fit or it may not.  Give it a shot and let me know one way or the other and I'll add a note to this readme.
+
+
