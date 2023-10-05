@@ -27,3 +27,4 @@ Note that these are designed for LDO 1515 extrusions.  I have not tested with Ma
 As far as I can tell, it should work with all V0 versions (0.0, 0.1, 0.2).  I tested it on my V0.1 and also put it in CAD on the V0.2.  
 
 ![](IMG/Installed.jpg)
+![](IMG/View.png)
