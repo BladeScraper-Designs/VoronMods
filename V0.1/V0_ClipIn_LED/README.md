@@ -26,7 +26,7 @@ Note that these are designed for LDO 1515 extrusions.  I have not tested with Ma
 
 As far as I can tell, it should work with all V0 versions (0.0, 0.1, 0.2).  I tested it on my V0.1 and also put it in CAD on the V0.2.  
 
-Compatibility wise for extruders, I know it works with my MiniAfterSherpa as that is what my printer uses.  Mechanical limits are hit in the X axis before the extruder touches the camera.  It is close, but it doesn't touch.  I have not teseted with any other extruders.  Some may stick out more than the Sherpa Mini, I'm unsure.  If you encounter issues, let me know and I'll see if there's any way I can modify the file to accommodate your setup.
+Compatibility wise for extruders, I know it works with my MiniAfterSherpa as that is what my printer uses.  Mechanical limits are hit in the X axis before the extruder touches the camera.  It is close, but it doesn't touch.  I have not teseted with any other extruders.  Some may stick out more side to side than the Sherpa Mini, I'm unsure.  If you encounter issues, let me know and I'll see if there's any way I can modify the file to accommodate your setup.
 
 ![](IMG/Installed.jpg)
 ![](IMG/View.png)
