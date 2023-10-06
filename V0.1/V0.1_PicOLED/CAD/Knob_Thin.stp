@@ -11,8 +11,8 @@ FILE_DESCRIPTION(
 FILE_NAME(
 /* name */ 
 'C:\\Users\\keith\\OneDrive\\Documents (PC)\\3D Models\\3D Printer Par
-ts\\Voron 0\\V0.1_OLED_Expander\\Knob_Wide.stp',
-/* time_stamp */ '2022-11-28T02:06:40-06:00',
+ts\\Voron 0\\V0.1_OLED_Expander\\Kob_Thin.stp',
+/* time_stamp */ '2023-10-06T14:53:00-05:00',
 /* author */ ('keith'),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v18.1',
@@ -8184,16 +8184,15 @@ SOLID_ANGLE_UNIT()
 #7544=PRODUCT_DEFINITION_SHAPE('',$,#7547);
 #7545=SHAPE_REPRESENTATION('',(#3747),#7537);
 #7546=PRODUCT_DEFINITION_CONTEXT('part definition',#7551,'design');
-#7547=PRODUCT_DEFINITION('Knob_Shorteneder','Knob_Shorteneder',#7548,#7546);
+#7547=PRODUCT_DEFINITION('Knob_Shorteneder','Kob_Thin',#7548,#7546);
 #7548=PRODUCT_DEFINITION_FORMATION('',$,#7553);
-#7549=PRODUCT_RELATED_PRODUCT_CATEGORY('Knob_Shorteneder',
-'Knob_Shorteneder',(#7553));
+#7549=PRODUCT_RELATED_PRODUCT_CATEGORY('Kob_Thin','Kob_Thin',(#7553));
 #7550=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#7551);
 #7551=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #7552=PRODUCT_CONTEXT('part definition',#7551,'mechanical');
-#7553=PRODUCT('Knob_Shorteneder','Knob_Shorteneder',$,(#7552));
+#7553=PRODUCT('Knob_Shorteneder','Kob_Thin',$,(#7552));
 #7554=PRESENTATION_STYLE_ASSIGNMENT((#7555));
 #7555=SURFACE_STYLE_USAGE(.BOTH.,#7558);
 #7556=SURFACE_STYLE_RENDERING_WITH_PROPERTIES($,#7562,(#7557));
