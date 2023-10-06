@@ -23,6 +23,7 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED_Encoder.stl
+- Knob_Thin.stl
 
 ### Display, Encoder, and ADXL Version (WIP)
 - Standard Raspberry Pi Pico
@@ -34,6 +35,8 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED_Encoder_ADXL.stl
+- Knob_Thin.stl
+  
 ## Wiring the display to the Pico MCU
 
 ![](https://m.media-amazon.com/images/I/61VmCzkMcYL.jpg)
