@@ -1,16 +1,44 @@
 ## Purpose
 
-The purpose of this mod is to provide an additional MCU to the V0.1 to drive a small OLED display in the skirt, as well as provide a rotary encoder interface for the menus.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  After all - I2C stands for Inter-Integrated Circuit, and was designed to connect two ICs locally on a single PCB.  As such, it does not do well with long wire runs such as the one I was using to drive the display originally.  
+The purpose of this mod is to provide an additional MCU to the V0.1 to add flexibility in accessories and configuration.  Originally, the reason I started on the design was because I was running into I2C timeout errors on my SSD1306 display when running it directly off of the SKR mainboard in my V0.1, due to the extremely long wire runs which I2C was not designed for.  While it may have been solvable by using shielded wire, the addition of a $4 RPi Pico board solves this problem entirely and also provides a bunch of IO for addional features.  This project has evolved over time, starting initially as only a display addon, then an encoder was added, and the latest version also adds a 6pin Micro-Fit 3.0 header to allow connection of an ADXL345 accelerometer for input shaper.
 
 ![](IMG/V0.1_PicOLED.jpg)<br>
 
-It utilizes a Raspberry Pi Pico MCU, which became supported in Klipper not too long ago.  At only $4 a piece, it offers an extremely affordable way to add an MCU to your V0.1.  The display itself is a SSD1306 0.96" I2C-Controlled OLED from UCTRONICS on Amazon, though I'd wager just about any 0.96" I2C OLED panel you buy will work as they all seem to have the same layout and dimensions.  The encoder is a typical KY-040 encoder, available for very cheap all over the place. The Pico then connects to the Raspberry Pi running Klipper over USB, and that's it!
+## BOM
+### Display-Only Version
+- Standard Raspberry Pi Pico
+- SSD1306 0.96" OLED I2C Display
+- M2x4 SHCS x 4
+- M2x6 SHCS x 4
+- Thin Hookup Wire (28-32AWG)
+- 1.5ft USB-A to Micro B Cable
+- Skirt_OLED.stl
 
-Becuase this is an entirely separate MCU, you can do a lot more with it than just driving a small display and the encoder.  You could easily add some wiring to connect to an ADXL345 to run input shaper (custom wiring harness and connector required), drive some NeoPixels, control an external MOSFET for e.g. fan control, and more.  
+### Display and Encoder Version
+- Standard Raspberry Pi Pico
+- SSD1306 0.96" OLED I2C Display
+- KY-040 Encoder Module
+- M2x4 SHCS x 4
+- M2x6 SHCS x 4
+- Thin Hookup Wire (28-32AWG)
+- 1.5ft USB-A to Micro B Cable
+- Skirt_OLED_Encoder.stl
 
+### Display, Encoder, and ADXL Version
+- Standard Raspberry Pi Pico
+- SSD1306 0.96" OLED I2C Display
+- KY-040 Encoder Module
+- Molex Micro-Fit 3.0 Free-Hanging Version 6-Contacts (PN: 43640-0601)
+- M2x4 SHCS x 4
+- M2x6 SHCS x 4
+- Thin Hookup Wire (28-32AWG)
+- 1.5ft USB-A to Micro B Cable
+- Skirt_OLED_Encoder_ADXL.stl
 ## Wiring the display to the Pico MCU
 
-Seeing as the display uses I2C wiring is super simple, using only four wires of which two are used for power. <br>
+![](https://m.media-amazon.com/images/I/61VmCzkMcYL.jpg)
+
+Seeing as the display uses I2C, wiring is super simple using only four wires of which two are used for power. <br>
 ** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so I'd power the display from 3.3V rather than 5V just to be safe.
 Wire them together according to the below list.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
 
@@ -20,6 +48,8 @@ SCK --> GP1 <br>
 SDA --> GP0 <br>
 
 ## Wiring the encoder to the Pico MCU
+
+![](https://components101.com/sites/default/files/component_pin/KY-04-Rotary-Encoder-Pinout.jpg)
 
 The encoder wiring is also quite simple.  Follow the below list.  You will need to either cut off/desolder the pins or bend them out of the way, because how they come out of the package the pins will hit the skirt piece.
 
