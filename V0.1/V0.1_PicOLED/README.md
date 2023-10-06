@@ -24,7 +24,7 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED_Encoder.stl
 
-### Display, Encoder, and ADXL Version
+### Display, Encoder, and ADXL Version (WIP)
 - Standard Raspberry Pi Pico
 - SSD1306 0.96" OLED I2C Display
 - KY-040 Encoder Module
