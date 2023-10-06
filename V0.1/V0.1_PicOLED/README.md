@@ -12,7 +12,6 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - M2x6 SHCS x 4
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
-  
 - Skirt_OLED.stl
 
 ### Display and Encoder Version
@@ -23,7 +22,6 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - M2x6 SHCS x 4
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
-  
 - Skirt_OLED_Encoder.stl
 - Knob_Thin.stl
 
@@ -36,7 +34,6 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 - M2x6 SHCS x 4
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
-  
 - Skirt_OLED_Encoder_ADXL.stl
 - Knob_Thin.stl
   
