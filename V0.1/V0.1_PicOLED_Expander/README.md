@@ -121,7 +121,7 @@ To create the firmware for the Pico, SSH into your Pi and enter these commands:
 ```
 cd ~/klipper
 make clean
-make menuconfig <br>
+make menuconfig
 ```
 
 Micro-controller Architecture should be set to "Raspberry Pi RP2040" <br>
