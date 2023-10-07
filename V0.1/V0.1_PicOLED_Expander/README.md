@@ -72,10 +72,8 @@ This mod was designed around the very common generic KY-040 encoder module.  The
 Due to size constraints, you must do a few modifications to the encoder for it to work with this mod.  
 - You must de-pin it (similar to the display in the previous section, but this time it's required)
 - You must shorten the shaft:<br>
-![](IMG/Encoder_Cut.jpg)<br>
-
-From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.  Slightly shorter is fine, but longer means the D-key will not fully engage.
-![](IMG/Encoder_Show.png)<br>
+      From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.
+      ![](IMG/Encoder_Show.png)<br>
 
 ### Wiring the Encoder
 
@@ -165,21 +163,17 @@ Once done with flashing the Pico, all you have to do is upload the picoled.cfg I
 
 Remember that serial ID you copied earlier when we were checking if the Pico was flashed successfully?  Now you need that.  Replace what's currently in as the ID in picoled.cfg with your own serial ID.
 
-Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  It should be fast and responsive.
+Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.
 
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
-
-## Encoder Knob
-
-Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.  
-
-I've also uploaded a wider, shorter knob that will only work if you cut down the encoder shaft by quite a bit.  See below:
 
 # Notes
 1. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
 2. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
 3. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
 4. Variations of the SSD1306 module sometimes have two colors, e.g. blue and yellow, others have all white, others different still.  Pay attention to product photos and descriptions if you want a specific color when buying your display module.
+5. If you go to test the ADXL for the first time and you get an error like this, don't panic.  For some reason, the first time you try to use the ADXL after a firmware (re)start, it errors like this.  The second try it then begins working normally.  I have observed this multiple times with multiple ADXL chips and multiple Picos, so I'm beginning to think it's a bug in Klipper.  If, however, you try a second time and it still doesn't work, that probably means your wiring is wrong.<br>
+  ![](IMG/Bug.png)<br>
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
