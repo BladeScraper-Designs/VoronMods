@@ -1,14 +1,25 @@
-[mcu picoled]
-serial: /dev/serial/by-id/usb-Klipper_rp2040_E660C06213411634-if00
+##################################
+# Config for V0.1_PicOLED_Expander
+##################################
 
+# MCU Section
+# Replace Your_PicOLED_ID below with the ID you got from the command ls /dev/serial/by-id/usb-Klipper_rp2040_*
+[mcu picoled]
+serial: /dev/serial/by-id/usb-Klipper_rp2040_Your_PicOLED_ID
+
+# Display Section
 [display]
 lcd_type: ssd1306
 i2c_mcu: picoled
 i2c_speed: 400000
 
+# Encoder Section
+# If you are using the Skirt version without encoder, comment out or remove the encoder_pins line and click_pin line.
 encoder_pins: picoled:gpio17, picoled:gpio16
 click_pin: ^!picoled:gpio18
 
+# ADXL Section 
+# If you are using one of the Skirt options without the ADXL connector, comment out or remove all of the below lines.
 [adxl345]
 spi_bus: spi0b
 cs_pin: picoled:gpio5
@@ -16,4 +27,4 @@ cs_pin: picoled:gpio5
 [resonance_tester]
 accel_chip: adxl345
 probe_points:
-    60,60,20 # an example
+    60,60,20
