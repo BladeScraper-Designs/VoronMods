@@ -139,10 +139,9 @@ You need to have the display assembly off of the printer for this step as you ne
 ```
 make flash FLASH_DEVICE=2e8a:0003
 ```
-This will automatically copy the file to the onboard flash when the Pico is in bootloader mode.  This feature was not available when I first made this mod, so it's good to see it here now.<br>
-<br>
+This will automatically copy the file to the Pico's virtual USB drive, which begins the flashing process.  It normally takes less than a second to perform the flashing process.
 
-2. To make sure your Pico was flashed correctly, type the following command:
+2. To check if the Pico was flashed successfully, type the following command:
 ```
 ls /dev/serial/by-id/usb-Klipper_rp2040*
 ```
