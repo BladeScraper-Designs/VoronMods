@@ -4,6 +4,9 @@ The purpose of this mod is to provide an additional MCU to the V0.1 to add flexi
 
 ![](IMG/V0.1_PicOLED.jpg)<br>
 
+## Small Warning:
+This mod requires good soldering skills as you will be dealing with small wire, small soldering pads, and close quarters. 
+
 ## BOM
 ### Display-Only Version
 - Standard Raspberry Pi Pico
