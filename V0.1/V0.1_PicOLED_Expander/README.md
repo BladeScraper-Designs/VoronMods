@@ -180,8 +180,8 @@ I've also uploaded a wider, shorter knob that will only work if you cut down the
 2. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
 3. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
 4. Variations of the SSD1306 module sometimes have two colors, e.g. blue and yellow, others have all white, others different still.  Pay attention to product photos and descriptions if you want a specific color when buying your display module.
-5. If you go to test the ADXL for the first time and you get an error like this, don't panic.  For some reason, the first time you try to use the ADXL after a firmware (re)start, it errors like this.  The second try it then begins working normally.  I have observed this multiple times with multiple ADXL chips and multiple Picos, so I'm beginning to think it's a bug in Klipper.  If, however, you try a second time and it still doesn't work, that probably means your wiring is wrong.
-![](IMG/Bug.png)<br>
+5. If you go to test the ADXL for the first time and you get an error like this, don't panic.  For some reason, the first time you try to use the ADXL after a firmware (re)start, it errors like this.  The second try it then begins working normally.  I have observed this multiple times with multiple ADXL chips and multiple Picos, so I'm beginning to think it's a bug in Klipper.  If, however, you try a second time and it still doesn't work, that probably means your wiring is wrong.<br>
+  ![](IMG/Bug.png)<br>
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
