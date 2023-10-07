@@ -8,7 +8,7 @@ While it may have been solvable,, the addition of a $4 RPi Pico board solves thi
 <br>
 It does all of this within the form factor of the original skirt.
 
-![](IMG/V0.1_PicOLED.jpg)<br>
+![](IMG/PicOLED.jpg)<br>
 
 ## Small Warning:
 This mod requires good soldering skills as you will be dealing with small wire, small soldering pads, desoldering, and close quarters work. 
@@ -181,3 +181,4 @@ This is the best routing I've found for the USB cable.
 ![](IMG/Routing_1.jpg)<br>
 ![](IMG/Routing_2.jpg)<br>
 
+![](IMG/Render.png)<br>
