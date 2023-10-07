@@ -1,0 +1,19 @@
+[mcu picoled]
+serial: /dev/serial/by-id/usb-Klipper_rp2040_E660C06213411634-if00
+
+[display]
+lcd_type: ssd1306
+i2c_mcu: picoled
+i2c_speed: 400000
+
+encoder_pins: picoled:gpio17, picoled:gpio16
+click_pin: ^!picoled:gpio18
+
+[adxl345]
+spi_bus: spi0b
+cs_pin: picoled:gpio5
+
+[resonance_tester]
+accel_chip: adxl345
+probe_points:
+    60,60,20 # an example
