@@ -1,4 +1,4 @@
-## Purpose
+# Purpose
 
 The purpose of this mod is to provide an additional MCU to the V0.1 to add flexibility in accessories and configuration.  
 <br>
@@ -11,9 +11,9 @@ It does all of this within the form factor of the original skirt.
 ![](IMG/V0.1_PicOLED.jpg)<br>
 
 ## Small Warning:
-This mod requires good soldering skills as you will be dealing with small wire, small soldering pads, and close quarters. 
+This mod requires good soldering skills as you will be dealing with small wire, small soldering pads, desoldering, and close quarters work. 
 
-## BOM
+# BOM
 ### Display-Only Version
 - Standard Raspberry Pi Pico
 - SSD1306 0.96" OLED I2C Display
@@ -43,18 +43,25 @@ This mod requires good soldering skills as you will be dealing with small wire, 
 - Skirt_OLED_Encoder_ADXL.stl
 - Knob_Thin.stl
   
-## Wiring the display to the Pico MCU
+# The Display
 
 ![](https://m.media-amazon.com/images/I/61VmCzkMcYL.jpg)
 
-Seeing as the display uses I2C, wiring is super simple using only four wires of which two are used for power. <br>
-** IMPORTANT ** the Pico GPIO is only rated to 3.3V.  I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so I'd power the display from 3.3V rather than 5V just to be safe.
-Wire them together according to the below list.  I prefer to desolder the pins from the OLED display and solder directly to the pads to keep it as low profile as possible.  
+This mod is designed around the very common generic SSD1306 0.96" OLED display module.  They are sold under a dozen different brands but they all follow the same form factor (more or less).   Attempts have been made to make the skirt as compatible as possible with as many versions of the module as possible, but you should be careful and slow when screwing down the display module the first time to make sure nothing is interfering.  Worst case, the incompatibility is bad enough that the OLED panel cracks, though that has not happened to me yet.<br>
 
-VCC --> 3V3 <br>
-GND --> GND <br>
-SCK --> GP1 <br>
-SDA --> GP0 <br>
+If you encounter an incompatibility with the particular display module you purchased, reach out via Discord (@BladeScraper) and let me know and I'll see if there's anything I can do to improve the compatibility.
+
+### Wiring the Display
+Seeing as the display uses I2C, wiring is super simple using only four wires of which two are used for power. <br>
+<br>
+I'm not sure if the SSD1306 modules have internal level shifters to ensure the I2C level is kept at 3.3V when powered by 5V, so power the display from 3.3V rather than 5V just to be safe.  Every SSD1306 module that I have tested has functioned flawlessly on 3.3V.
+<br>
+Wire them together according to the below list.  I highly recommend desoldering the pins from the display module and soldering wires directly which helps to keep it more low profile.  The easiest way to do this is to remove the plastic piece (use a knife to pry it away from the board some, then pull it the rest of the way off) and then desolder the pins one by one.
+
+VCC --> 3V3 OUT (pin36)<br>
+GND --> GND (pin38)<br>
+SCK --> GP1 (pin2)<br>
+SDA --> GP0 (pin1)<br>
 
 ## Wiring the encoder to the Pico MCU
 
