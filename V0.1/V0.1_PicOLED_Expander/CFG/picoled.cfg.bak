@@ -20,6 +20,7 @@ click_pin: ^!picoled:gpio18
 
 # ADXL Section 
 # If you are using one of the Skirt options without the ADXL connector, comment out or remove all of the below lines.
+# You do not need to comment out the below when not actively using the accelerometer.  It will work fine without the accelerometer plugged in.
 [adxl345]
 spi_bus: spi0b
 cs_pin: picoled:gpio5
