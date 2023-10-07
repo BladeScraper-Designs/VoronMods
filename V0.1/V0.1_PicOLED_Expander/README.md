@@ -72,8 +72,8 @@ This mod was designed around the very common generic KY-040 encoder module.  The
 Due to size constraints, you must do a few modifications to the encoder for it to work with this mod.  
 - You must de-pin it (similar to the display in the previous section, but this time it's required)
 - You must shorten the shaft:<br>
-    From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.  Slightly shorter is fine, but longer means the D-key will not fully engage.
-    ![](IMG/Encoder_Show.png)<br>
+      From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.  Slightly shorter is fine, but longer means the D-key will not fully engage.
+      ![](IMG/Encoder_Show.png)<br>
 
 ### Wiring the Encoder
 
