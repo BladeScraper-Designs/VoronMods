@@ -17,8 +17,7 @@ This mod requires good soldering skills as you will be dealing with small wire, 
 ### Display-Only Version
 - Standard Raspberry Pi Pico
 - SSD1306 0.96" OLED I2C Display
-- M2x4 SHCS x 4
-- M2x6 SHCS x 4
+- M2x4 SHCS x 8
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED.stl
@@ -27,8 +26,7 @@ This mod requires good soldering skills as you will be dealing with small wire, 
 - Standard Raspberry Pi Pico
 - SSD1306 0.96" OLED I2C Display
 - KY-040 Encoder Module
-- M2x4 SHCS x 4
-- M2x6 SHCS x 4
+- M2x4 SHCS x 8
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED_Encoder.stl
@@ -39,8 +37,7 @@ This mod requires good soldering skills as you will be dealing with small wire, 
 - SSD1306 0.96" OLED I2C Display
 - KY-040 Encoder Module
 - Molex Micro-Fit 3.0 Free-Hanging Version 6-Contacts (PN: 43640-0601)
-- M2x4 SHCS x 4
-- M2x6 SHCS x 4
+- M2x4 SHCS x 8
 - Thin Hookup Wire (28-32AWG)
 - 1.5ft USB-A to Micro B Cable
 - Skirt_OLED_Encoder_ADXL.stl
