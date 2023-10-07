@@ -58,8 +58,8 @@ I'm not sure if the SSD1306 modules have internal level shifters to ensure the I
 <br>
 Wire them together according to the below list.  I highly recommend desoldering the pins from the display module and soldering wires directly which helps to keep it more low profile.  The easiest way to do this is to remove the plastic piece (use a knife to pry it away from the board some, then pull it the rest of the way off) and then desolder the pins one by one.
 
-VCC --> 3V3 OUT (pin36)<br>
 GND --> GND (pin38)<br>
+VCC --> 3V3 OUT (pin36)<br>
 SCK --> GP1 (pin2)<br>
 SDA --> GP0 (pin1)<br>
 
@@ -73,7 +73,6 @@ Due to size constraints, you must do a few modifications to the encoder for it t
 - You must de-pin it (similar to the display in the previous section, but this time it's required)
 - You must shorten the shaft:<br>
 ![](IMG/Encoder_Cut.jpg)<br>
-![](IMG/ADXL_Conn_Wiring.jpg)<br>
 
 From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.  Slightly shorter is fine, but longer means the D-key will not fully engage.
 ![](IMG/Encoder_Show.png)<br>
@@ -84,22 +83,36 @@ The encoder wiring is fairly straight forward.  Officially, the encoder requires
 
 For wiring, follow the below list.
 
-VCC --> 3V3 OUT (pin36)<br>
 GND --> GND (pin38)<br>
+VCC --> 3V3 OUT (pin36)<br>
 SW --> GP18 (pin24)<br>
 DT --> GP17 (pin22)<br>
 CLK --> GP16 (pin21)<br>
 
 Seemingly randomly, the encoder will scroll the display and adjust selected values in the opposite direction you would expect.  In the case that happens, simply swap the two encoder pins in your config (more on that below).
 
-# The ADXL Connector (M-F 3.0)
+# The ADXL Connector
 
+![](IMG/ADXL_Conn_Wiring.jpg)<br>
 
-This mod was designed around the Molex Micro-Fit 3.0 connector 1x6 for connection to an ADXL345 accelerometer via SPI.  See BOM for the exact connector required.  
+This mod was designed around the Molex Micro-Fit 3.0 connector 1x6 for connection to an ADXL345 accelerometer via SPI.  See BOM for the exact connector required.  It is a nice snug fit in the opening in the Skirt as designed.  In  most cases, it will be snug enough that it won't move at all as you're removing/inserting the other side of the connector. If it's too loose, you can use a dab of hot glue to secure it in place.  You could use super glue, but you probably shouldn't if you ever want the connector to come back out. 
 
 ### Wiring the ADXL Connector
 
+As far as the pinout of this connector, it really doesn't matter.  You can wire it however you want, as long as the pins match up on both ends.  I chose to wire it as follows, from left to right (when looking at the skirt from the front).  This matches 1:1 the connector on the ADXL module itself, minus the INT1 and INT2 pins:<br>
 
+GND, VCC, CS, SDO, SDA, SCL
+
+![](IMG/ADXL_Front.jpg)<br>
+
+As far as soldering goes, you need to use the spi0b connections on the GPIO pins.  This is because the connections for the display takes up some of the spi0a connections.  The spi0b connections are as follows:
+
+GND --> GND (pin38)<br>
+VCC --> 3V3 OUT (pin36)<br>
+CS --> GP5 (pin7)<br>
+SDO --> GP4 (pin6)<br>
+SDA --> GP7 (pin10)<br>
+SCL --> GP6 (pin9)<br>
 
 ## Making the Pico Firmware
 
