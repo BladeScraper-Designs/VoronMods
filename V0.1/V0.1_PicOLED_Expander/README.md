@@ -114,39 +114,56 @@ SDO --> GP4 (pin6)<br>
 SDA --> GP7 (pin10)<br>
 SCL --> GP6 (pin9)<br>
 
-## Making the Pico Firmware
+# Flashing the Pico
 
-To flash the Pico MCU, SSH into your Pi and enter these commands.
+### Making the Firmware
+Before flashing, we first need to configure Klipper for the Pico microcontroller.  Once that's done, we tell Klipper to "make" (compile) the firmware.
+To create the firmware for the Pico, SSH into your Pi and enter these commands:
 
-1. cd ~/klipper
-2. make clean
-3. make menuconfig <br>
-    Micro-controller Architecture should be set to "Raspberry Pi RP2040" <br>
-    Communication Interface should be USB <br>
-4. Q (asks you to save, hit Y)
+```
+cd ~/klipper
+make clean
+make menuconfig <br>
+```
 
-## Flashing your Pico
+Micro-controller Architecture should be set to "Raspberry Pi RP2040" <br>
+Communication Interface should be USB <br>
+Then run:
+```
+make
+```
+
+### Flashing the Pico
 
 Once the make commmand is finished, there's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster and easier), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (if the first method doesn't work).  These instructions are the easier way:
 
-1. Disconnect the Pico from your Pi if you haven't already.  Then, while holding the BOOTSEL button, plug it into the Pi.  It will go into bootloader mode, where you can flash the firmware.
-2. Run this command:
-    make flash FLASH_DEVICE=2e8a:0003
-    This will automatically copy the file to the onboard flash when the Pico is in bootloader mode.  This feature was not available when I first made this mod, so it's     good to see it here now.
-3. To make sure your Pico was flashed correctly, then type the following command:
-   ls /dev/serial/by-id/usb-Klipper_rp2040*
-   If it was successfully flashed, it will show up as something like:
-   /dev/serial/by-id/usb-Klipper_rp2040_E660C06213844C34-if00
-   Save this ID for later btw.  You'll need it for the .cfg.
+Disconnect the Pico from your Pi if you haven't already.  Then, while holding the BOOTSEL button, plug it into the Pi.  It will go into bootloader mode and mount a small removable drive to your Pi.
+
+1. Run this command:
+```
+make flash FLASH_DEVICE=2e8a:0003
+```
+This will automatically copy the file to the onboard flash when the Pico is in bootloader mode.  This feature was not available when I first made this mod, so it's good to see it here now.<br>
+<br>
+
+2. To make sure your Pico was flashed correctly, then type the following command:
+```
+ls /dev/serial/by-id/usb-Klipper_rp2040*
+```
+If the Pico was successfully flashed, it will show up as something like:
+```
+usb-Klipper_rp2040_BunchOfRandomNumbersAndLetters
+```
+Save this ID for later btw.  You'll need it for the .cfg.<br>
    
-   Nothing will happen on the display right now, since there is no configuration done yet.  We'll do that next.
+Nothing will happen on the display right now, since there is no configuration done yet.  We'll do that next.
 
 
-## Setting up .cfg 
+# Configuring Klipper
 
-Once done with flashing the Pico, all you have to do is upload the pico.cfg I've included to the config folder on your main Pi, then add [include pico.cfg] to your main printer.cfg.  Alternatively, you can just copy the contents of pico.cfg to your main printer.cfg.  I prefer the separate cfg myself, though.
+Once done with flashing the Pico, all you have to do is upload the picoled.cfg I've included to your main Pi, then add [include picoled.cfg] to your main printer.cfg.  Alternatively, you can just copy the contents of picoled.cfg to your main printer.cfg.  I prefer the separate cfg myself, though.
 
-Remember that serial ID you copied earlier when we were checking if the Pico was flashed successfully?  Now you need that.  Replace what's currently in as the ID in pico.cfg with your own serial ID.
+Remember that serial ID you copied earlier when we were checking if the Pico was flashed successfully?  Now you need that.  Replace what's currently in as the ID in picoled.cfg with your own serial ID.
 
 Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  It should be fast and responsive.
 
@@ -158,15 +175,11 @@ Several different versions available here.  First is a through-hole knob that al
 
 I've also uploaded a wider, shorter knob that will only work if you cut down the encoder shaft by quite a bit.  See below:
 
-## Notes
-1. An 18" micro USB seems to be the perfect length. Obviously longer will work, but you'll need to wrap it around itself a few times to shorten it.  The [MonoPrice 1.5ft Micro USB](https://smile.amazon.com/gp/product/B002HZYBZ6) cable on Amazon is exactly what I am using, and it works great.
-2. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
-3. You only need to use the two outermost holes in the skirt to screw the Skirt down.  It has four since it was made using the two separate skirt pieces, but in reality one on each end is fine.  It'd be pretty hard to access the ones towards the middle anyway, what with the Pi and stuff in the way.
-4. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
-5. In order to use the Knob_Shortened.stl provided in STLs/CAD, you need to shorten the encoder spline by 5mm.  I found the knob it comes with to be disproportionately long.  Alternatively, I've included the STLs and CAD for the same knob but with a hole in the end (Knob_Through.stl) to allow the spline to extend past.  It looks a bit silly, but it works if you don't have the equipment to shorten the spline on the encoder.
-6. You may have to trim a little bit of the PCB on the encoder at the bottom to prevent it from rubbing on/hitting the skirt.  
-7. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
-8. One weird thing about these SSD1306 OLED displays is that they often have a different color for the top row.  I'm not really sure why this is, but naturally that means the top row of the mdnu will always be that color (in my case, yellow).  I believe there are some of these that are all one color, but that's not what I have.
+# Notes
+1. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
+2. The hole in the skirt for the encoder is closed off for printability.  It's only one or two layers thick, so that you're not trying to bridge in a circle.  This allows printing without supports.  Once printed, simply use an X-Acto knife or similar to cut out the thin layers.
+3. The encoder sticks out quite a bit in the back, inside the skirt.  You may need to move your PSU just slightly inward to avoid the encoder body interfering with the PSU.
+4. Variations of the SSD1306 module sometimes have two colors, e.g. blue and yellow, others have all white, others different still.  Pay attention to product photos and descriptions if you want a specific color when buying your display module.
 
 ## USB Cable Routing
 This is the best routing I've found for the USB cable. 
