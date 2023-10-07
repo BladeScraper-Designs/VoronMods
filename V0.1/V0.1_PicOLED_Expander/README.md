@@ -63,17 +63,33 @@ GND --> GND (pin38)<br>
 SCK --> GP1 (pin2)<br>
 SDA --> GP0 (pin1)<br>
 
-## Wiring the encoder to the Pico MCU
+# The Encoder
 
-![](https://components101.com/sites/default/files/component_pin/KY-04-Rotary-Encoder-Pinout.jpg)
+![](https://i.ebayimg.com/images/g/BE4AAOSwHXxe-0rh/s-l1600.jpg)
 
-The encoder wiring is also quite simple.  Follow the below list.  You will need to either cut off/desolder the pins or bend them out of the way, because how they come out of the package the pins will hit the skirt piece.
+This mod was designed around the very common generic KY-040 encoder module.  There are a few variations floating around but as far as I can tell, as long as they look like the one pictured above they will be compatible.<br>  
 
-VCC --> 3V3 <br>
-GND --> GND <br>
-SW --> GP18 <br>
-DT --> GP17 <br>
-CLK --> GP16 <br>
+Due to size constraints, you must do a few modifications to the encoder for it to work with this mod.  
+- You must de-pin it (similar to the display in the previous section, but this time it's required)
+- You must shorten the shaft:<br>
+![](IMG/Encoder_Cut.jpg)<br>
+
+From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.
+![](IMG/Encoder_Show.png)<br>
+
+### Wiring the Encoder
+
+The encoder wiring is fairly straight forward.  Officially, the encoder requires 5V, but testing has shown no issues with 3.3V operation, which is a necessity for the Pico. 
+
+For wiring, follow the below list.
+
+VCC --> 3V3 OUT (pin36)<br>
+GND --> GND (pin38)<br>
+SW --> GP18 (pin24)<br>
+DT --> GP17 (pin22)<br>
+CLK --> GP16 (pin21)<br>
+
+Seemingly randomly, the encoder will scroll the display and adjust selected values in the opposite direction you would expect.  In the case that happens, simply swap the two encoder pins in your config (more on that below).
 
 ## Making the Pico Firmware
 
@@ -118,8 +134,6 @@ STEP files have also been included in /CAD to allow you to add whatever you want
 Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.  
 
 I've also uploaded a wider, shorter knob that will only work if you cut down the encoder shaft by quite a bit.  See below:
- 
-![](IMG/Encoder_Cut.jpg)<br>
 
 ## Notes
 1. An 18" micro USB seems to be the perfect length. Obviously longer will work, but you'll need to wrap it around itself a few times to shorten it.  The [MonoPrice 1.5ft Micro USB](https://smile.amazon.com/gp/product/B002HZYBZ6) cable on Amazon is exactly what I am using, and it works great.
