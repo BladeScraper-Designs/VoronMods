@@ -73,8 +73,9 @@ Due to size constraints, you must do a few modifications to the encoder for it t
 - You must de-pin it (similar to the display in the previous section, but this time it's required)
 - You must shorten the shaft:<br>
 ![](IMG/Encoder_Cut.jpg)<br>
+![](IMG/ADXL_Conn_Wiring.jpg)<br>
 
-From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.
+From the face of the encoder's metal body to the end of the shaft must be no more than 15mm.  Use a dremel cutoff wheel or hacksaw to shorten it.  Slightly shorter is fine, but longer means the D-key will not fully engage.
 ![](IMG/Encoder_Show.png)<br>
 
 ### Wiring the Encoder
@@ -90,6 +91,15 @@ DT --> GP17 (pin22)<br>
 CLK --> GP16 (pin21)<br>
 
 Seemingly randomly, the encoder will scroll the display and adjust selected values in the opposite direction you would expect.  In the case that happens, simply swap the two encoder pins in your config (more on that below).
+
+# The ADXL Connector (M-F 3.0)
+
+
+This mod was designed around the Molex Micro-Fit 3.0 connector 1x6 for connection to an ADXL345 accelerometer via SPI.  See BOM for the exact connector required.  
+
+### Wiring the ADXL Connector
+
+
 
 ## Making the Pico Firmware
 
