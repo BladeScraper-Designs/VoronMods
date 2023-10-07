@@ -105,7 +105,7 @@ GND, VCC, CS, SDO, SDA, SCL
 
 ![](IMG/ADXL_Front.jpg)<br>
 
-As far as soldering goes, you need to use the GPIO connections for spi0b.  This is because the connections for the display takes up some of the spi0a connections.  The spi0b connections are as follows:
+As far as soldering goes, you need to use the spi0b connections on the GPIO pins.  This is because the connections for the display takes up some of the spi0a connections.  The spi0b connections are as follows:
 
 GND --> GND (pin38)<br>
 VCC --> 3V3 OUT (pin36)<br>
