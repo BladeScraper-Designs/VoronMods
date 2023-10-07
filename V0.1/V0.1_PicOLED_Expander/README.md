@@ -165,15 +165,9 @@ Once done with flashing the Pico, all you have to do is upload the picoled.cfg I
 
 Remember that serial ID you copied earlier when we were checking if the Pico was flashed successfully?  Now you need that.  Replace what's currently in as the ID in picoled.cfg with your own serial ID.
 
-Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.  It should be fast and responsive.
+Once that's done, you should be able to do a firmware restart and see your new OLED display working just as intended.  You can also test your encoder to ensure it is working.
 
 STEP files have also been included in /CAD to allow you to add whatever you want to the skirt.  
-
-## Encoder Knob
-
-Several different versions available here.  First is a through-hole knob that allows you to install it without any cutting on the encosder shaft.  This has the annoying disadvantage that the encoder knob shaft. will sick out past the printed knob handle. The other option is the same knob with no through-hole which means wyou will need to cut your encoder shaft down by about 5mm.  The third option (my personal preference) is the Knob_wide, which is the same deal but requires the encoder shaft to be shortened even more.  You can see approximately how long the shaft should be by looking at this photo.  Not the most elegant soltuion but the end result is quite nice.  
-
-I've also uploaded a wider, shorter knob that will only work if you cut down the encoder shaft by quite a bit.  See below:
 
 # Notes
 1. If you plan to drive NeoPixels with this, beware that it's powered only by the 5V USB line, so you'll be limited in the number of NeoPixels you can drive off the Pico directly.
