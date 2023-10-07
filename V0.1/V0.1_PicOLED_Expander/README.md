@@ -133,9 +133,7 @@ make
 
 ### Flashing the Pico
 
-Once the make commmand is finished, there's a couple ways to flash the firmware to the Pico.  You can either do it on the Pi itself (faster and easier), or use FTP to grab the firmware from the Pi and use a Windows PC to copy it to the Pico (if the first method doesn't work).  These instructions are the easier way:
-
-Disconnect the Pico from your Pi if you haven't already.  Then, while holding the BOOTSEL button, plug it into the Pi.  It will go into bootloader mode and mount a small removable drive to your Pi.
+You need to have the display assembly off of the printer for this step as you need to be able to access the BOOTSEL button on the Pico.  Unplug the Pico from the Pi (if it isn't already), then while holding the BOOTEL button, plug it back in.  This will put the Pico into bootloader mode.  
 
 1. Run this command:
 ```
@@ -144,7 +142,7 @@ make flash FLASH_DEVICE=2e8a:0003
 This will automatically copy the file to the onboard flash when the Pico is in bootloader mode.  This feature was not available when I first made this mod, so it's good to see it here now.<br>
 <br>
 
-2. To make sure your Pico was flashed correctly, then type the following command:
+2. To make sure your Pico was flashed correctly, type the following command:
 ```
 ls /dev/serial/by-id/usb-Klipper_rp2040*
 ```
@@ -155,7 +153,6 @@ usb-Klipper_rp2040_BunchOfRandomNumbersAndLetters
 Save this ID for later btw.  You'll need it for the .cfg.<br>
    
 Nothing will happen on the display right now, since there is no configuration done yet.  We'll do that next.
-
 
 # Configuring Klipper
 
