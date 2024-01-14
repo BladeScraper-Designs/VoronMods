@@ -36,6 +36,6 @@ You can pull the cooler off of the heatsink and leave the heatsink in place.  It
 ![](IMG/Cooler_Uninstalled.jpg)<br>
 
 Install the spoolholder.  Use 2 x M3x20 screws.
-![](IMG/SpoolHolder_Uninstalled.jpg)<br>
+![](IMG/SpoolHolder_Installed.jpg)<br>
 
 
