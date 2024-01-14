@@ -7,7 +7,7 @@ The purpose of this mod is to add cooling to the V0 AB motors to allow higher ru
 ### BOM: <br>
 2 x 3010 Blower Fan (GDSTime or Similar), Voltage is your Choice<br> 
 2 x 35x35x10 Heatsinks<br>
-2 x M3x20 Screws (BHCS Preferred).<br>
+2 x M3x20 Screws (For Spool Holder).<br>
 
 ![](IMG/BOM.jpg)
 
