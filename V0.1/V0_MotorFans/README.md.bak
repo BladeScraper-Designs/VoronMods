@@ -1,0 +1,41 @@
+## Purpose
+
+The purpose of this mod is to add cooling to the V0 AB motors to allow higher run currents and thus higher speeds and accels.
+
+![](IMG/Both_Installed.jpg)
+
+### BOM: <br>
+2 x 3010 Blower Fan (GDSTime or Similar), Voltage is your Choice<br> 
+2 x 35x35x10 Heatsinks<br>
+2 x M3x20 Screws (BHCS Preferred).<br>
+
+![](IMG/BOM.jpg)
+
+### Print Instructions:<br>
+-STL is already oriented for best print orientation.<br>
+-You should have your printer tuned well for bridges because there are a couple fairly long bridges.<br>
+-No Supports required (unless your printer can't do the bridges well).<br>
+
+Obviously, you can't use a rear panel with this mod. 
+
+I have also included a spoolholder that 1. works without a rear panel and 2. sticks out a bit further so that the spool clears the cooler and leaves the fan some breathing room. 
+
+### Assembly Instructions and Notes
+Install the fan.  There is a notch in the part to allow the fan wires to come out.
+![](IMG/Fan_Uninstalled.jpg)<br>
+![](IMG/Fan_Installed.jpg)<br>
+
+Install the heatsink.  Ensure the fins are lined up lengthwise, having them running sideways will likely impede airflow too much.
+![](IMG/Heatsink_Uninstalled.jpg)<br>
+![](IMG/Heatsink_Installed.jpg)<br>
+
+Install the cooler onto each motor, using the frame extrusions on a guide.<br>
+For best results, use thermal glue instead of the thermal tape included with some heatsinks, as stepper motors are not smooth nor perfectly flat.  The tape will work decently but glue is much better.
+![](IMG/Cooler_Installed.jpg)<br>
+You can pull the cooler off of the heatsink and leave the heatsink in place.  It's just a slip fit.
+![](IMG/Cooler_Uninstalled.jpg)<br>
+
+Install the spoolholder.  Use 2 x M3x20 screws.
+![](IMG/SpoolHolder_Uninstalled.jpg)<br>
+
+
