@@ -11,4 +11,4 @@ Current list of mods:
 [CornerPanel_SpoolHolder](V0.1//CornerPanel_SpoolHolder)<br>
 [V0.1_PicOLED_Expander](/V0.1/V0.1_PicOLED_Expander)<br>
 [V0_ClipIn_LED](/V0.1/V0_ClipIn_LED)<br>
-
+[V0_MotorFans](/V0.1/V0_MotorFans)<br>
